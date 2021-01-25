@@ -1,0 +1,34 @@
+<section class='signup'>
+    <form #f='ngForm'  dir="rtl" (ngSubmit)='addOffer(f,place.value)'>
+        <i class="fa fa-users main_user"></i>
+        <h1 class='text-center main_title'> اضافة محتوي او فكره جديده </h1>
+
+        <div>
+            <input type="text" name='name' ngModel #name='ngModel' placeholder="الاسم" required>
+            <div class="alert-danger" *ngIf='name.touched && name.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+
+        <div>
+            <input type="text" name='section' ngModel #section='ngModel' placeholder="قسم" required>
+            <div class="alert-danger" *ngIf='section.touched && section.errors?.required'> هذا الحقل مطلوب </div>
+        </div>
+        
+        <div>
+            <input type="text" name='level' ngModel #level='ngModel' placeholder="الفرقة والفرع" required>
+        </div>
+
+        <div>
+            <textarea #place  placeholder="لينكات فيديوهات او مقالات او لو عندك موهبة اذكرها" ></textarea>
+        </div>
+      
+        <button *ngIf='f.valid'> اضافة   </button>
+        <p class='wait text-center' *ngIf='show'>  انتظر لحظات لحين ارسال المحتوي </p>
+        <div class="alert-danger">{{error_msg}}</div>
+    </form>
+          <!-- drop down -->
+    
+<hr>
+<p class='text-center' style="color:#f1f1f1; font-size:15px;">   للتواصل مع الدعم واتس  // 011&nbsp;43&nbsp;680&nbsp;575        </p>
+       
+</section> &nbsp;
+

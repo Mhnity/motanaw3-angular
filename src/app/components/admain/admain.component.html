@@ -1,0 +1,349 @@
+
+<div class="admin">
+    <div class="row">
+        <!-- start form -->
+        <div class="child_one  col-lg">
+            <form #f='ngForm' (ngSubmit)='addcourse(f)' dir="rtl">
+                <h1 class='add_cours'> اضافة <span> كورس </span> جديد  </h1>
+                <div class="cours_title">
+                    <h4 class='title_one' #title_one> .......     </h4> <span> / </span>
+                    <h4 class='title_two' #title_two> .......  </h4> <span> / </span>
+                    <h4 class='title_three' #title_three> .....    </h4>
+                </div>
+                <div>
+                    <input type="text" name='name' ngModel #name='ngModel'  placeholder="فرع" required>
+                    <div *ngIf='name.touched && name.errors?.required'  class='alert alert-danger'> *   ادخل اسم الفرع   </div>
+                </div>
+
+                <div>
+                    <input type="text" name='subject' ngModel #subject='ngModel'  placeholder="الماده" required>
+                    <div *ngIf='subject.touched && subject.errors?.required'  class='alert alert-danger'> *   ادخل اسم الماده </div>
+                </div>
+            
+                <div>
+                    <input type="date" name='date' ngModel #date='ngModel'   placeholder="التاريخ" required>
+                    <div class='alert alert-danger' *ngIf='date.touched && date.errors?.required'> * اختر تاريخ الكورس  </div>
+                </div>
+
+                <div class='img_div'>
+                    <label> صوره غلاف الكورس</label>
+                    <span class='text-right' dir="ltr"> {{img.value | slice:12}} </span>
+                    <input type="file" name='img'  ngModel #img required>
+                </div>
+
+                <button class='btn the_button btn-primary' *ngIf='f.valid'> اضافة     </button>
+                
+            </form>
+        </div>
+
+
+
+        <!-- start dash board -->
+        <div class="child_two col-lg">
+            <!--
+                <ul style="margin-top:200px" class='top'>
+                    <li> <a> compurter </a></li>
+                    <li> <a> arts </a></li>
+               </ul> 
+            -->
+           
+            <div class="add_title" dir="rtl">
+                <h1> اختر </h1> &nbsp; 
+                <h4> القسم     </h4> <span> + </span>
+                <h4 > الفرقة  </h4> <span> + </span>
+                <h4> الترم    </h4>
+            </div>
+            <aside dir="rtl">
+                <div class='menus'>
+                    <!------------------ computer -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'><i class="fas fa-caret-left"></i> الحاسب الالي  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul '>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li class='term'> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <!------------------ technology -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'>  <i class="fas fa-caret-left"></i> التكنولوجيا  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ music  -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> موسيقي  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ art -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> فنية  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ economic -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'><i class="fas fa-caret-left"></i> اقتصاد منزلي   </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ media -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> اعلام تربوي  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!------------------ stage -->
+                    <div class='menu'>
+                        <h2> 
+                            <a class='sec'> <i class="fas fa-caret-left"></i> مسرح  </a>
+                            <span class='icons'>
+                                <i class="fas fa-angle-up up"></i>
+                            </span>
+                        </h2>
+
+                        <ul class='list-unstyled inside_ul'>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الاولي </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثانية </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                            <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الثالثة </a>
+                                <ul>
+                                    <li> الترم الاول   </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                           </li>
+                           <li class='inside_li'> 
+                                <a class='inside_sec'> الفرقة الرابعة </a>
+                                <ul>
+                                    <li> الترم الاول  </li>
+                                    <li> الترم الثاني </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</div>
+
+

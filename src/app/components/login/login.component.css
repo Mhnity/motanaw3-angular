@@ -1,0 +1,121 @@
+.login {
+  background: url("../../../assets/imgs/login/login-background.jpg");
+  position: relative;
+  background-size: cover;
+  padding: 50px;
+}
+
+@media (max-width: 767px) {
+  .login {
+    padding: 50px 0;
+  }
+}
+
+form {
+  border-radius: 34px;
+  width: 450px;
+  margin: 130px auto 0 auto;
+  background: #222831;
+  border: 1px solid #fff;
+  padding: 50px 15px 20px 15px;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  form {
+    width: 92% !important;
+  }
+}
+
+form .main_user {
+  font-size: 63px;
+  position: absolute;
+  top: -60px;
+  padding: 25px 29px;
+  border-radius: 50%;
+  left: 38%;
+  color: #ffffff;
+  background: #222831;
+  border-top: 1px solid #fff;
+}
+
+@media (max-width: 767px) {
+  form .main_user {
+    font-size: 43px;
+    top: -40px;
+    padding: 20px;
+    border-radius: 50%;
+    left: 37%;
+  }
+}
+
+form .main_title {
+  color: #F6850E;
+}
+
+form .input_user {
+  position: absolute;
+  right: 25px;
+  top: 44%;
+  color: #555555e0;
+}
+
+form .input_key {
+  position: absolute;
+  right: 25px;
+  top: 61%;
+  color: #555555e0;
+}
+
+form h1 {
+  margin: 0 0 20px 0;
+  color: #fff;
+}
+
+form div {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+form div input {
+  width: 100%;
+  padding: 9px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid #F2F2F2;
+  background: #F2F2F2;
+}
+
+form div .alert-danger {
+  padding: 5px;
+  margin-top: 5px;
+  border-radius: 6px;
+  text-align: right;
+}
+
+form button {
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: bold;
+  outline: none;
+  display: block;
+  margin: 0 auto 10px auto;
+  padding: 10px 35px;
+  font-size: 20px;
+  border-radius: 10px;
+  background: #F6850E;
+}
+
+form button:hover {
+  opacity: .6;
+}
+
+form .err {
+  color: #f00;
+}
+
+form dir {
+  margin: 0;
+  padding-left: 0;
+}
+/*# sourceMappingURL=login.component.css.map */

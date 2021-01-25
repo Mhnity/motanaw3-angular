@@ -1,0 +1,17 @@
+<div class="container products">
+    <div class="row">
+        <div class="col-sm-6  col-lg-4" *ngFor='let offer of offers; index as i '>
+            <div class="card text-right">
+                <a class='delate' (click)='delate(ofname)'> <i class="fas fa-trash-alt" title="حذف الاعلان "></i> </a>
+                <div class="card-body">
+                    <p> <span #ofname>{{offer.name}}</span>  <bdi> <span class='tit'>  الاسم :</span> </bdi> </p>
+                    <p> <span> {{offer.section}} </span>  <bdi> <span class='tit'> قسم  :</span> </bdi>  </p>
+                    <p> <span> {{offer.level}} </span>  <bdi> <span class='tit'> الفرقة والفرع  :</span> </bdi>  </p>
+                    <p class="text-center tit"> المحتوي </p>
+                    <p> {{offer.area}} </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
